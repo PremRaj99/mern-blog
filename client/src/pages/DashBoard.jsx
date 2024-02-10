@@ -20,10 +20,8 @@ export default function DashBoard() {
         <DashSideBar />
       </div>
 
-      <div className="">
-        {/* Main */}
-        {tab === "profile" && <DashProfile />}
-      </div>
+      {/* Main */}
+      {tab === "profile" && <DashProfile />}
     </div>
   );
 }
