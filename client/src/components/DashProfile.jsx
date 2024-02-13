@@ -21,19 +21,18 @@ export default function DashProfile() {
   const filePickerRef = useRef(null);
   const handleImageChange = (e) => {
     const file = e.target.files[0];
-    console.log(file)
+    console.log(file);
     const size = 2 * 1024 * 1024;
     if (file && file.size < size) {
       setImageFile(file);
       setImageFileUrl(URL.createObjectURL(file));
-    }
-    else {
+    } else {
       setImageFileUploadError(
         "Couldn't upload an image (File must be less then 2MB or not in Image Formet)"
       );
       setImageFileUploadingProgress(null);
-        setImageFile(null);
-        setImageFileUrl(null);
+      setImageFile(null);
+      setImageFileUrl(null);
     }
   };
   useEffect(() => {
