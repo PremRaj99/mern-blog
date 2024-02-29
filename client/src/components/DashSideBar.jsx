@@ -17,6 +17,7 @@ export default function DashSideBar() {
   const [tab, setTab] = useState("");
   const dispatch = useDispatch();
   const currentUser = useSelector((state) => state.user.currentUser);
+  
   useEffect(() => {
     const urlParams = new URLSearchParams(location.search);
     const tabFromUrl = urlParams.get("tab");
@@ -24,6 +25,7 @@ export default function DashSideBar() {
       setTab(tabFromUrl);
     }
   }, [location.search]);
+
   const handleSignout = async () => {
     try {
       const res = await fetch("/api/user/signout", {
