@@ -9,7 +9,7 @@ export default function CallToAction() {
           Want to learn more about React?
         </h2>
         <p className="text-gray-500 my-2">
-          Checkout these resources with 5 React Porjects
+          Checkout these resources with 5 React Projects
         </p>
         <Button
           gradientDuoTone="purpleToPink"
